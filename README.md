@@ -1,116 +1,164 @@
-# Concursos - Plataforma de Trivia y Concursos
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-Plataforma web para la gestión de concursos y trivias, con roles diferenciados para administradores, empresas y moderadores. Permite crear concursos, preguntas de trivia, gestionar participaciones, premios y notificaciones.
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-## Tecnologías utilizadas
+## About Laravel
 
-- **Backend:** PHP / Laravel
-- **Base de datos:** MySQL
-- **Frontend:** Blade, Tailwind CSS, Vite
-- **Gestor de dependencias:** Composer / NPM
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-## Funcionalidades principales
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-- Gestión de concursos y trivias con tiempo límite
-- Roles de Administrador, Empresa y Moderador
-- Sistema de preguntas con importación
-- Gestión de premios y participaciones
-- Notificaciones automáticas (concursos por finalizar, intentos agotados)
-- Reportes y mensajes de contacto
-- Autenticación y recuperación de contraseña
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-##  Requisitos previos
+## Learning Laravel
 
-- PHP (versión 8.2 o superior recomendado)
-- Composer
-- MySQL o un gestor como XAMPP/Laragon
-- Node.js y NPM
-- Git
 
-## Instalación paso a paso
 
-### 1. Clonar el repositorio
+## Laravel Sponsors
 
-```bash
-git clone https://github.com/tu-usuario/nombre-del-repo.git
-cd nombre-del-repo
-```
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### 2. Instalar las dependencias de PHP
+### Premium Partners
 
-```bash
-composer install
-```
+- **[Vehikl](https://vehikl.com)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Redberry](https://redberry.international/laravel-development)**
+- **[Active Logic](https://activelogic.com)**
 
-### 3. Instalar las dependencias de JavaScript
+## Contributing
 
-```bash
-npm install
-```
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-### 4. Configurar el archivo de entorno
+## Code of Conduct
 
-```bash
-cp .env.example .env
-```
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-> **Nota:** El archivo `.env` real no está incluido en el repositorio por seguridad. Debes completarlo con tus propios datos locales.
+## Security Vulnerabilities
 
-### 5. Generar la clave de la aplicación
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-```bash
-php artisan key:generate
-```
+## License
 
-### 6. Configurar la base de datos
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-Edita el archivo `.env` con tus datos de MySQL local:
+## Verificar la version de PHP debe ser mas de 8.2
+php -v
 
-```
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=nombre_de_tu_base_de_datos
-DB_USERNAME=root
-DB_PASSWORD=tu_contraseña
-```
+## Instalar laravel
+composer global require laravel/installer
 
-Crea la base de datos vacía:
+## Verificar la version del laravel
+laravel --version
 
-```sql
-CREATE DATABASE nombre_de_tu_base_de_datos;
-```
+## Si se va a crear el proyecto de cero usar, si no no usar
+composer create-project laravel/laravel concursos
 
-### 7. Ejecutar las migraciones
+## Abrir en visual code
+code .
 
-```bash
-php artisan migrate
-```
+## Limpiar el servidor
+php artisan optimize:clear
 
-### 8. Compilar los assets (Tailwind CSS + Vite)
-
-```bash
-npm run dev
-```
-
-o para producción:
-
-```bash
-npm run build
-```
-
-### 9. Iniciar el servidor local
-
-```bash
+## Ejecutar el servidor
 php artisan serve
+
+## Nota: mostrar avatares (storage)
+
+Si vas a usar subida de foto de perfil (avatar) asegúrate de crear el enlace público:
+
+```bash
+php artisan storage:link
 ```
 
-El proyecto quedará disponible en `http://127.0.0.1:8000`
+## Usuario administrador
+Usuario administrador:
 
+User: admin
+Pass: admin123
 
+## Crear usuarios administradores (Remplaza los datos y ejecuta lo siguiente en un terminal)
 
-##  Autora
+php artisan tinker
 
-**Daisy Chileno**
-Estudiante de Desarrollo de Software
-[LinkedIn](https://www.linkedin.com/in/daisy-chileno-tuapanta-20a508232/)
+User::create([
+    'name' => 'Administrador',
+    'email' => 'admin2@admin.com',
+    'password' => bcrypt('admin123'),
+    'role' => 'admin'
+]);
+
+## Contraseña para modificar usuarios desde el sistema
+
+RIS2364T
+
+---
+
+# Cumplimiento de requisitos del Caso Práctico (2025-II)
+
+Este proyecto implementa una **primera versión funcional** enfocada principalmente en **concursos tipo Trivia** (la lógica de "sorteos" se dejó fuera para simplificar la entrega).
+
+## Requisitos funcionales
+
+### 1) Registro e inicio de sesión
+- Registro y login por **correo y contraseña**.
+- Reset de contraseña (forgot/reset).
+- Roles soportados: **admin**, **company**, **user**.
+
+> Nota: "Redes sociales" no está implementado (se puede agregar luego con Laravel Socialite).
+
+### 2) Gestión de concursos
+- **Empresa**: crea concursos (trivia) y administra preguntas (manual o importación Excel).
+- **Admin**: crea concursos como empresa (asigna a una empresa) y administra preguntas/importación.
+- Publicación de concursos a usuarios y publicación de ganadores.
+
+### 3) Participación
+- Usuarios ven concursos activos y pueden participar.
+- Trivia con cronómetro, respuestas y cálculo de resultados.
+- Historial básico del usuario.
+
+### 4) Notificaciones
+- Notificación cuando se publica una trivia.
+- Notificación de "trivia por finalizar" (comando programado cada hora).
+- Notificación a participantes cuando se publican ganadores.
+
+### 5) Visualización de resultados
+- Vista de resultados del usuario (premios ganados) y panel para empresa (entrega de premios).
+
+### 6) Panel de administración
+- Panel admin para métricas, usuarios, empresas, concursos y reportes.
+
+## Requisitos no funcionales
+
+### Rendimiento
+- Consultas paginadas/por chunks (notificaciones) para evitar cargar muchos usuarios en memoria.
+
+### Usabilidad
+- UI responsiva (Tailwind) y pantallas de auth con estilo tipo Breeze.
+
+### Compatibilidad
+- Funciona en navegadores modernos.
+
+### Mantenibilidad
+- Código comentado en español y estructura MVC estándar de Laravel.
+
+### Seguridad
+- Contraseñas con hash.
+- CSRF en formularios.
+- Regeneración de sesión en login.
+- **Rate limit** al login para evitar fuerza bruta (throttle).
+
